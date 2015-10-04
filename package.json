@@ -1,0 +1,93 @@
+{
+  "name": "react-router-bootstrap-reflux-webpack-template",
+  "version": "0.0.1",
+  "description": "React and friends boilerplate",
+  "homepage": "https://github.com/ezand/react-router-bootstrap-reflux-webpack-boilerplate",
+  "author": "Eirik Sand",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "react-router",
+    "react-bootstrap",
+    "reflux",
+    "webpack",
+    "jest"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezand/react-router-bootstrap-reflux-webpack-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ezand/react-router-bootstrap-reflux-webpack-boilerplate/issues"
+  },
+  "engines": {
+    "node": ">= 0.12.2",
+    "npm": ">= 2.8.4"
+  },
+  "scripts": {
+    "postinstall": "TARGET=build webpack",
+    "build": "TARGET=build webpack",
+    "start": "TARGET=dev webpack-dev-server --progress --colors --hot --content-base build",
+    "lint": "eslint . --ext .js --ext .jsx",
+    "clean": "node ./config/clean.js",
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "testFileExtensions": [
+      "es6",
+      "js",
+      "jsx"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6",
+      "jsx"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
+  },
+  "dependencies": {
+    "debug": "^2.1.3",
+    "express": "^4.12.3",
+    "imports-loader": "^0.6.3",
+    "jquery": "^2.1.4",
+    "react": "^0.13.2",
+    "react-bootstrap": "^0.21.2",
+    "react-router": "^0.13.3",
+    "react-router-bootstrap": "^0.13.3",
+    "react-tools": "^0.13.2",
+    "reflux": "^0.2.7"
+  },
+  "devDependencies": {
+    "babel-core": "^5.2.17",
+    "babel-eslint": "^3.1.1",
+    "babel-jest": "^5.2.0",
+    "babel-loader": "^5.0.0",
+    "bootstrap-sass": "^3.3.4",
+    "bootstrap-sass-loader": "^1.0.4",
+    "css-loader": "^0.12.0",
+    "del": "^1.1.1",
+    "eslint": "^0.20.0",
+    "eslint-loader": "^0.11.1",
+    "eslint-plugin-react": "^2.2.0",
+    "esprima-fb": "^15001.1.0-dev-harmony-fb",
+    "file-loader": "^0.8.1",
+    "html-webpack-plugin": "^1.3.0",
+    "jest-cli": "^0.4.1",
+    "jscs": "^1.13.1",
+    "jscs-loader": "0.0.5",
+    "lodash": "^3.8.0",
+    "node-sass": "^3.0.0",
+    "parse": "^1.6.4",
+    "parse-react": "^0.5.0",
+    "react-hot-loader": "^1.2.7",
+    "sass-loader": "^1.0.1",
+    "style-loader": "^0.12.2",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2"
+  }
+}
